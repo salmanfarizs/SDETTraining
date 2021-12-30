@@ -49,6 +49,7 @@ A subsequence of a string is a new string that is formed from the original strin
 	
 	public boolean subsequence(String s,String t) {
 		
+	//solution 1	
 	char[] sarray = s.toCharArray();
 	char[]tarray = t.toCharArray();
 	String result="";
@@ -75,7 +76,7 @@ A subsequence of a string is a new string that is formed from the original strin
 	}
 	
 	
-		
+	//solution 2 replace all	
 		
 	return false;	
 	}

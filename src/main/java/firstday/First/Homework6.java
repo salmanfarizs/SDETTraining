@@ -20,17 +20,17 @@ public class Homework6 {
 	 *  
 	 */
 	
-	@Test
+	//@Test
 	public void revPos() {
 		
 		String s = "leetcode";
 		rev(s);
 	}
 
-	//@Test
+	@Test
 	public void revEdge() {
 		
-		String s = "abcde";
+		String s = "aeiou";
 		rev(s);
 		
 	}
@@ -74,7 +74,7 @@ public class Homework6 {
 	    
 */
 		
-		char[] arr= s.toCharArray();
+		/*char[] arr= s.toCharArray();
 		Set<Character> vowels=new HashSet<Character>();
         vowels.add('a');
         vowels.add('e');
@@ -112,10 +112,44 @@ public class Homework6 {
 			}
 		}
 		
-		System.out.println(Arrays.toString(arr));
-	}	
+		System.out.println(Arrays.toString(arr));*/
+		
+		//hello
+		
+		char[] arr= s.toCharArray();
+		Set<Character> vowels=new HashSet<Character>();
+        vowels.add('a');
+        vowels.add('e');
+        vowels.add('i');
+        vowels.add('o');
+        vowels.add('u');
+        vowels.add('A');
+        vowels.add('E');
+        vowels.add('I');
+        vowels.add('O');
+        vowels.add('U');
+        
+        int left=0, right = arr.length -1;
+        
+        	
+		while (left < right) {
+			if (vowels.contains(arr[left]) && vowels.contains(arr[right])) {
+				char temp = arr[left];
+				arr[left++] = arr[right];
+				arr[right--] = temp;
+			}else if (vowels.contains(arr[left]) && !vowels.contains(arr[right]))
+				right--;
+
+			else if (!vowels.contains(arr[left]) && vowels.contains(arr[right]))
+				left++;
+			else if (!vowels.contains(arr[left]) && !vowels.contains(arr[right])) {
+				left++;
+				right--;
+			}
+			//System.out.println(Arrays.toString(arr));
+		}	
 			
-			
+					System.out.println(Arrays.toString(arr));
 			
 		}
 		
@@ -123,3 +157,4 @@ public class Homework6 {
 
 
 
+}

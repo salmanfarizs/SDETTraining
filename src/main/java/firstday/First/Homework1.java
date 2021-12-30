@@ -3,7 +3,7 @@
 
 package firstday.First;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -19,8 +19,8 @@ public class Homework1
 {
 	
 	/*
-	 * Given the integer array and the target, 
-       remove the matching target from the array
+	 * Given the integer aay and the target, 
+       remove the matching target from the aay
 	 * 
 	 * 
 	 * 
@@ -31,9 +31,8 @@ public class Homework1
     @Test
     public void example1()
     {
-		int a[] = {0,1,0,3,12};
-		
-		System.out.println(Arrays.toString(moveZeros(a)));
+    	int a[] = {1,0,4,0,12,0,0};
+		moveZeros(a);
         
     }
 	
@@ -43,7 +42,7 @@ public class Homework1
     {
 		
     	int a[] = {1,4,12,0,0};
-    	System.out.println(Arrays.toString(moveZeros(a)));
+    	moveZeros(a);
     }
 	
     // Negative cases
@@ -51,25 +50,25 @@ public class Homework1
     public void example3()
     {
 		int a[] = {1,3,12};
-		System.out.println(Arrays.toString(moveZeros(a)));
+		moveZeros(a);
     }
     
-    /* Check if array is empty Return empty array
-     * Create a output array
-     * Traverse through the input array (for loop)
+    /* Check if aay is empty Return empty aay
+     * Create a output aay
+     * Traverse through the input aay (for loop)
      * Check if the target number matches
-     * If target number does not matches add to output array
-     * Return output array
+     * If target number does not matches add to output aay
+     * Return output aay
      *  
      */
     
     
 	
-	public int[] moveZeros(int a[]) {
+	public void moveZeros(int a[]) {
 		
 	//solution 1	
-	/*	ArrayList<Integer> list1 = new ArrayList();
-		ArrayList<Integer> list2 = new ArrayList();
+	/*	aayList<Integer> list1 = new aayList();
+		aayList<Integer> list2 = new aayList();
 		
 		for(int i=0;i<a.length;i++) {
 			
@@ -91,18 +90,35 @@ public class Homework1
 		
 		//solution 2
 		
-		int count=0;
+	/*	int count=0;
 		
-		for(int i=0;i<a.length;i++) {
+		for(int i=0;i<a.length;i++) {  //O[n]
 			if(a[i]!=0)
 				a[count++]=a[i];
 		}
 		
-		while(count<a.length) {
+		while(count<a.length) {   //[O[n]
 			a[count++]=0;
 		}
 		
-		return a;
+		return a;*/
+		
+		
+		//solution 3 2 pointer alogorithm
+		
+		int left = 0, right = 0;
+		while(right < a.length) {
+			if(a[right] != 0 ) {
+				int temp = a[right];
+				a[right] = a[left];
+				a[left++] = temp;
+			}
+			right++;
+		}
+		System.out.println(Arrays.toString(a));
+		
+		
+		
 	}
 	
 }
