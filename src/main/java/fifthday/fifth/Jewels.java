@@ -51,8 +51,6 @@ public class Jewels {
 		
 		char[] ch = stones.toCharArray();
 		
-		HashMap<Character,Integer> map = new HashMap<Character,Integer>();
-		
 		HashSet<Character> set = new HashSet<Character>();
 		
 		char[] charArray = jewel.toCharArray();

@@ -12,7 +12,7 @@ public class RingsRods {
 	public void rings() {
 		
 		
-		String rings="G4";
+		String rings="B1R1G1";
 		System.out.println(numberOfRings(rings));
 	}
 	

@@ -8,7 +8,7 @@ public class Homework2 {
 	
 	
 	//positive
-	//@Test
+	@Test
 	public void posConsecutive() {
 		
 		int a[]= {1,1,0,1,1,1};
@@ -26,7 +26,7 @@ public class Homework2 {
 		} 
 
 		//positive
-		@Test
+		//@Test
 	public void negConsecutive() {
 			int a[]= {0,2,3,4,5};
 			getNumberCount(a);

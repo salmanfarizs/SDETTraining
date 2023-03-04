@@ -18,7 +18,7 @@ A subsequence of a string is a new string that is formed from the original strin
 	 * 
 	 */
 	
-	//@Test
+	@Test
 	public void subPos() {
 		
 		String s = "abcde";
@@ -27,7 +27,7 @@ A subsequence of a string is a new string that is formed from the original strin
 		Assert.assertTrue(subsequence(s,t));
 	}
 
-	@Test
+	//@Test
 	public void subEdge() {
 		
 		String s = "abcde";
